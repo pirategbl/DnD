@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEBF14C5-F7E3-4BF7-A03C-50C2B4DAC4F9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DanD</RootNamespace>
+    <AssemblyName>DanD</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>c:\ded\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DB5AD895C44C58334F208803108295A6023A859D</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DanD_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=5.0.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 5.0.8\Binaries\.NET 2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Battle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Battle.Designer.cs">
+      <DependentUpon>Battle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroJogadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroJogadores.Designer.cs">
+      <DependentUpon>CadastroJogadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calculadora.cs" />
+    <Compile Include="Dados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dados.Designer.cs">
+      <DependentUpon>Dados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiceRoller.cs" />
+    <Compile Include="Encontros.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jogador.cs" />
+    <Compile Include="Monstros.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Battle.resx">
+      <DependentUpon>Battle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroJogadores.resx">
+      <DependentUpon>CadastroJogadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dados.resx">
+      <DependentUpon>Dados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DanD_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\backgroundBattle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\monstersImages\dragaoVermelhoAnciao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kobold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragaoVermelhoAnciao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vampiro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\djinni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elementalDaAgua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esqueleto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fantasma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnoll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goblin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\golemDeFerro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hipogrifo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kraken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lich.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lobisomem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loboAtroz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medusa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minotauro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monstroDeFerrugem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mumia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\observador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ogro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pegaso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\planetario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quimera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\satiro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarrasque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\troll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vermePurpura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aranhaGigante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banshee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ciclope.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cocatriz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\devoradorDeMentes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diaboDeChifres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agrupaDescricoes.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
